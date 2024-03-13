@@ -3,10 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
       <url>
             <loc>http://localhost:1313/posts/gnu-stow/</loc>
             <lastmod>2024-03-11T21:48:38+01:00</lastmod>
           </url>
+    
+  
     
   
     
@@ -21,6 +25,8 @@
             <loc>http://localhost:1313/posts/</loc>
             <lastmod>2024-03-11T21:48:38+01:00</lastmod>
           </url>
+    
+  
     
   
     

@@ -14,7 +14,7 @@ title = "nllptr's exceptions"
 
 [params.author]
   name = "Simon Wessel"
-  # image = "img/author.jpg"
+  image = "img/author.jpg"
   # headline = "I'm only human"
   # bio = "A little bit about you"
   links = [

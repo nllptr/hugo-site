@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on nllptr&#39;s exceptions</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on nllptr&#39;s exceptions</description>
+    <title>Alacritty on nllptr&#39;s exceptions</title>
+    <link>http://localhost:1313/tags/alacritty/</link>
+    <description>Recent content in Alacritty on nllptr&#39;s exceptions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 11 Mar 2024 21:48:38 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/alacritty/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gnu Stow</title>
       <link>http://localhost:1313/posts/gnu-stow/</link>

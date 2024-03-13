@@ -54,7 +54,7 @@
     name="description"
     content="
       
-        
+        For the longest time, I haven&rsquo;t cared too much about keeping my own set of &ldquo;dotfiles&rdquo; (or configuration files) for software that I commonly use.
       
     "
   />
@@ -77,7 +77,7 @@
   
   
   <meta property="og:title" content="Gnu Stow" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="For the longest time, I haven&rsquo;t cared too much about keeping my own set of &ldquo;dotfiles&rdquo; (or configuration files) for software that I commonly use." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/gnu-stow/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-11T21:48:38+01:00" />
@@ -85,7 +85,7 @@
 
 
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Gnu Stow"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="For the longest time, I haven&rsquo;t cared too much about keeping my own set of &ldquo;dotfiles&rdquo; (or configuration files) for software that I commonly use."/>
 
   
   <script type="application/ld+json">
@@ -96,7 +96,7 @@
     "name": "Gnu Stow",
     "headline": "Gnu Stow",
     
-    
+    "abstract": "For the longest time, I haven\u0026rsquo;t cared too much about keeping my own set of \u0026ldquo;dotfiles\u0026rdquo; (or configuration files) for software that I commonly use.",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/gnu-stow\/",
     "author" : {
@@ -109,10 +109,10 @@
     
     "dateModified": "2024-03-11T21:48:38\u002b01:00",
     
-    
+    "keywords": ["stow","neovim","alacritty"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "968"
   }
   </script>
 
@@ -269,6 +269,8 @@
   
 
   
+    
+  
 
   
 
@@ -276,19 +278,10 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-11 21:48:38 &#43;0100 CET">2024-03-11</time>
+      <time datetime="2024-03-11 21:48:38 &#43;0100 CET">2024-03-11</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
-    
-      <span class="ps-2"><span class="flex">
-  <span
-    class="ms-1 rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    Draft
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -303,7 +296,69 @@
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        
+        <p>For the longest time, I haven&rsquo;t cared too much about keeping my own set of &ldquo;dotfiles&rdquo; (or configuration
+files) for software that I commonly use. Instead, I&rsquo;ve preferred to use software with good defaults
+and tried to learn those defaults.</p>
+<p>Recently, as I have gotten more into home labbing, I&rsquo;ve had the
+need to set up the same software on multiple hosts. As a consequence of this, I created a repo for the
+single purpose of comitting my configuration files so that they could be used on multiple machines.</p>
+<p>My first iteration on this was to just put the files in a <code>.config</code> folder, and then write a script
+that would put the files in the right place on the host machine. Whenever I had updated my files in
+in the git repo, I would need to run the script to overwrite the previous version.</p>
+<p>As one does, I watched a lot of YouTube videos on the topic, and soon discovered <a href="https://www.gnu.org/software/stow/" target="_blank" rel="noreferrer">GNU Stow</a>.
+It basically does what my script did, but in a cleaner way. In short, Stow creates a symlink for every file in my
+folder, &ldquo;one level up&rdquo;. This means that I don&rsquo;t have to run some sort of update script in order to
+copy my changes from the local git repo to their destination.</p>
+<p>With my custom script, I had to hard code the source and destination to some extent (I&rsquo;m no shell scripting pro).
+Somewhere along the process, I realized that it was only a matter of time before my update script
+would get out of hand.</p>
+<p>Stow on the other hand, just creates symlinks to match whatever file structure you have in your repo.</p>
+<h1 id="some-consequences" class="relative group">Some consequences <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#some-consequences" aria-label="Anchor">#</a></span></h1><h2 id="clear-process" class="relative group">Clear process <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#clear-process" aria-label="Anchor">#</a></span></h2><p>As I mentioned in the previous section - I like good defaults and conventions. With the assumptions Stow
+makes, I have a clear process to adhere to whenever I set up a new environment.</p>
+<ol>
+<li>Install Stow</li>
+<li>Clone my dotfile repo to the home folder</li>
+<li>Run Stow from the repo root</li>
+</ol>
+<h2 id="hunger-for-more" class="relative group">Hunger for more <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hunger-for-more" aria-label="Anchor">#</a></span></h2><p>Once this very clear workflow was established, I found myself more eager to add to it. I&rsquo;ve moved more and
+more of my commonly used applications into Stow.</p>
+<p>One of the greatest wins was that I finally made the decision to clean up my terminal config. Previously I
+used oh-my-zsh. The reason? Good defaults. But over time, as I&rsquo;ve added to my <code>.zshrc</code>, I&rsquo;ve found my terminal
+to become slower and slower. It&rsquo;s not by much, but it&rsquo;s noticable. Firing up a new terminal to make a quick change
+is annoying when you&rsquo;re forced to wait for a few seconds just for the prompt to become responsive. Yes, I could
+take the time to clean it up, but with all of that out-of-the-box configuration that oh-my-zsh provides, it&rsquo;s
+hard to know exactly what causes the issues.</p>
+<p>A good outcome of this shell overhaul was that I could throw oh-my-zsh away completely. That by itself got
+rid of my lag. But I also found Alacritty, a super snappy terminal emulator, that has now replaced my previous
+go to solution - iTerm2.</p>
+<p>Of course, both the <code>.zshrc</code> and the Alacritty config goes into the dotfiles repo.</p>
+<p>When I saw how much snappier my terminal could get, and as I now had my config files under control, I started
+looking at other places where I could improve my personal toolbox. Text editors is a classic use case, so soon
+I found myself building out a neovim config.</p>
+<h1 id="new-requirements-emerge" class="relative group">New requirements emerge <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#new-requirements-emerge" aria-label="Anchor">#</a></span></h1><p>So now that I&rsquo;ve stared building my dotfiles repo, one idea gnaws in the back of my mind: this needs to be usable
+everywhere, otherwise I&rsquo;m wasting my time. So whenever I pick new software, I give preference to software that is
+cross-platform. If Windows is not on the list of supported platforms, that&rsquo;s one excpetion I&rsquo;m willing to make.</p>
+<p>This is one reason that I really like Alacritty. It&rsquo;s cross platform. My previous favorite, iTerm2, made me depend
+on iTerm2 specific behavior. The second I moved into a Linux environment, I would sometimes get caught by unexpected
+behaviors, usually related to special modifier keys, which Macs have in excess.</p>
+<p>Another nice-to-have is that the application is configurable from the <code>.config</code> folder. It simply makes for a more
+tidy folder structure in your home directory. It&rsquo;s not a hard requirement, but just a preference.</p>
+<h1 id="the-long-term" class="relative group">The long term <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-long-term" aria-label="Anchor">#</a></span></h1><p>My previous stance - prefer good defaults, avoid all customization - has taken the backseat, and I attribute it
+all to Stow. I didn&rsquo;t really want to maintain a dotfiles repo if I still had to wrestle with the tedium of
+manually putting those files in the right place.
+Mostly because of the extra cognitive load of updating my config files. I would have to
+make the change, and see that it works in the application, then copy those config changes into my repo.
+Too much. But with stow, I edit my config in the local repo, and the changes are reflected in the applications
+thanks to Stow&rsquo;s symlinking.</p>
+<p>So what does this mean long term? It means that I can take the time to customize my tools. As a software engineer,
+there are tons of little optimizations to be made. Before Stow, I didn&rsquo;t want to make that time investment,
+because I couldn&rsquo;t manage those optimizations in a good way. But now I can.</p>
+<p>I&rsquo;m not the first to make the analogy, but just as a wood worker takes pride in keeping their workshop clean and
+their tools in the right place, so can we hackers keep our config files in order. Just as the wood worker experiments with
+the correct blade angle for their hand plane, so we hackers experiment with tool configurations.</p>
+<p>And we have something the wood workers don&rsquo;t. We have git :)</p>
+<p><a href="https://www.gnu.org/software/stow/" target="_blank" rel="noreferrer">https://www.gnu.org/software/stow/</a></p>
+
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
@@ -311,6 +366,51 @@
   <div class="flex">
     
     
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="886"
+        height="886"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Simon Wessel"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu38d892322f8e984939fd440e2f8de73e_168607_660x0_resize_q75_box.jpg"
+          srcset="/img/author_hu38d892322f8e984939fd440e2f8de73e_168607_330x0_resize_q75_box.jpg 330w,/img/author_hu38d892322f8e984939fd440e2f8de73e_168607_660x0_resize_q75_box.jpg 660w
+          
+            ,/img/author.jpg 886w
+          
+          
+            ,/img/author.jpg 886w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
     
     <div class="place-self-center">
       
@@ -355,6 +455,17 @@
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
