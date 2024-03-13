@@ -1,7 +1,7 @@
 +++
-title = 'debugger;'
+title = "debugger;"
 date = 2019-09-25T07:52:21+01:00
-tags = ["javascript"]
+tags = ["JavaScript"]
 categories = ["Old blog"]
 +++
 

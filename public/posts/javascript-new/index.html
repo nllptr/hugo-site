@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>First impression of Rust &middot; nllptr&#39;s exceptions</title>
-    <meta name="title" content="First impression of Rust &middot; nllptr&#39;s exceptions" />
+  <title>Javascript&#39;s `new` keyword &middot; nllptr&#39;s exceptions</title>
+    <meta name="title" content="Javascript&#39;s `new` keyword &middot; nllptr&#39;s exceptions" />
   
   
   
@@ -54,14 +54,14 @@
     name="description"
     content="
       
-        I just started looking at Rust.
+        Usage #new is used to create new instances of objects with the help of constructor functions.
       
     "
   />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/rust-first-impressions/" />
+  <link rel="canonical" href="http://localhost:1313/posts/javascript-new/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -76,16 +76,16 @@
   
   
   
-  <meta property="og:title" content="First impression of Rust" />
-<meta property="og:description" content="I just started looking at Rust." />
+  <meta property="og:title" content="Javascript&#39;s `new` keyword" />
+<meta property="og:description" content="Usage #new is used to create new instances of objects with the help of constructor functions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/rust-first-impressions/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-09-11T05:34:21+01:00" />
-<meta property="article:modified_time" content="2019-09-11T05:34:21+01:00" />
+<meta property="og:url" content="http://localhost:1313/posts/javascript-new/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-20T12:59:11+01:00" />
+<meta property="article:modified_time" content="2019-09-20T12:59:11+01:00" />
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="First impression of Rust"/>
-<meta name="twitter:description" content="I just started looking at Rust."/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Javascript&#39;s `new` keyword"/>
+<meta name="twitter:description" content="Usage #new is used to create new instances of objects with the help of constructor functions."/>
 
   
   <script type="application/ld+json">
@@ -93,26 +93,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "First impression of Rust",
-    "headline": "First impression of Rust",
+    "name": "Javascript\u0027s \u0060new\u0060 keyword",
+    "headline": "Javascript\u0027s \u0060new\u0060 keyword",
     
-    "abstract": "I just started looking at Rust.",
+    "abstract": "Usage #new is used to create new instances of objects with the help of constructor functions.",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/rust-first-impressions\/",
+    "url" : "http:\/\/localhost:1313\/posts\/javascript-new\/",
     "author" : {
       "@type": "Person",
       "name": "Simon Wessel"
     },
     "copyrightYear": "2019",
-    "dateCreated": "2019-09-11T05:34:21\u002b01:00",
-    "datePublished": "2019-09-11T05:34:21\u002b01:00",
+    "dateCreated": "2019-09-20T12:59:11\u002b01:00",
+    "datePublished": "2019-09-20T12:59:11\u002b01:00",
     
-    "dateModified": "2019-09-11T05:34:21\u002b01:00",
+    "dateModified": "2019-09-20T12:59:11\u002b01:00",
     
-    
+    "keywords": ["JavaScript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "649"
+    "wordCount": "201"
   }
   </script>
 
@@ -242,7 +242,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        First impression of Rust
+        Javascript's `new` keyword
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -278,7 +278,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2019-09-11 05:34:21 &#43;0100 &#43;0100">2019-09-11</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2019-09-20 12:59:11 &#43;0100 &#43;0100">2019-09-20</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -296,43 +296,34 @@
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <p>I just started looking at Rust. I&rsquo;ve been putting it off for a while since I&rsquo;ve been focusing on Go,
-and haven&rsquo;t really had the bandwidth to learn another language. But yesterday I was inspired by a colleague
-of mine. And so I present my initial thoughts.</p>
-<h1 id="getting-started" class="relative group">Getting started <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getting-started" aria-label="Anchor">#</a></span></h1><p>When I first started with Go, it could be a bit of a hassle to get things set up, with GOPATH and such.
-With Rust I felt it was way easier. Though, I will have to take into account that I&rsquo;m comparing apples to
-oranges. Setting up Go these days is a bit easier, and I have no idea wether Rust has been difficult to set up
-in the past. But looking at it here and now, it was only a matter of installing <code>rustup</code>, and things just work.</p>
-<h1 id="learning-rust" class="relative group">Learning Rust <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#learning-rust" aria-label="Anchor">#</a></span></h1><p>One thing that got me excited about Go was the (in my opinion) good and easy-to-read documentation of the
-standard library. It seems that Rust has taken it a few steps further. Similar to Go, Rust comes with utilities
-to browse documentation locally in your web browser. This is a huge deal for me, since most of my learning time is
-on the commuter train with an unstable Internet connection.</p>
-<p>I haven&rsquo;t really looked into it yet, but it seems that Rust has some really neat ways of documenting ones code,
-and generating web docuementation from it. Another super sweet feature is that the documentation comes with an e-book,
-usually just called &ldquo;the book&rdquo;.</p>
-<h1 id="package-management" class="relative group">Package management <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#package-management" aria-label="Anchor">#</a></span></h1><p>One place where Rust seems to out-shine Go is in the space of package management. I&rsquo;ve been happy so far
-with Go&rsquo;s way of doing things, since I&rsquo;ve usually only done small projects without complex dependencies. The
-<code>go get</code> command was simple and worked. Vendoring worked. But at this point the Go team has started working on ways
-to better manage dependencies (such as modules). Rust seems to give you a lot of this out of the box. The tool
-<code>cargo</code> is used to manage your dependencies, and seems to do a good job. Please note that these are just my
-initial thoughts. I&rsquo;m sure that I with time will find things that I wish were different. It&rsquo;s not a perfect world.</p>
-<h1 id="standard-libarary" class="relative group">Standard libarary <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#standard-libarary" aria-label="Anchor">#</a></span></h1><p>The great standard library of Go is something I love. Same with Python. I don&rsquo;t know yet, but my initial
-impressions (which are just that - impressions) are that Rust does not have the same rich standard library.
-For example - a tutorial in &ldquo;the book&rdquo; shows you how to write a number guessing game. This requires generating
-a random number, functionality that I&rsquo;ve come to take for granted that it should exist in the standard library.
-This is not the case in Rust. However, there is a library (written by the Rust team I believe) that is easily
-installed with <code>cargo</code>.</p>
-<h1 id="enumerated-types" class="relative group">Enumerated types <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enumerated-types" aria-label="Anchor">#</a></span></h1><p>I&rsquo;ve come to get accustomed to Go&rsquo;s multiple return values. Especially when it comes to error handling. It&rsquo;s
-very common practice that the last return value of a function is an error value which you check right after the
-function returns to make sure everything went ok.
-Rust instead uses enumerated types. One such type is the <code>Result</code> type, which is an enumerated type. After calling
-a function that returns an enumerated type you check the return value. The nice thing about checking (or &ldquo;matching&rdquo;)
-enumerated types is that the compiler forces you to check every case. That way, you can know at compile time that
-you didn&rsquo;t leave any cases out.</p>
-<h1 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h1><p>Rust seems to have a lot going for it. I&rsquo;m curious, but probably not curious enough to keep digging. Especially
-since I&rsquo;m mostly in the web API space, which is where Go really shines. I&rsquo;ll probably revisit Rust at
-some point, but right now, I have other things that require my attention.</p>
-
+        <h1 id="usage" class="relative group">Usage <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usage" aria-label="Anchor">#</a></span></h1><p><code>new</code> is used to create new instances of objects with the help of constructor functions. While taking a look
+at <a href="/blog/prototypes">prototypes</a>, I ran into the <code>new</code> keyword, and how it relates to the <code>function.prototype</code>
+property. I thought that it might be a good exercise to look into how <code>new</code> works.</p>
+<h1 id="under-the-hood" class="relative group">Under the hood <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#under-the-hood" aria-label="Anchor">#</a></span></h1><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new" target="_blank" rel="noreferrer">MDN</a>, there
+are three steps taken when using <code>new</code>:</p>
+<ol>
+<li>A new object is created. If the constructor function has its <code>prototype</code> property set to some object,
+the newly created object will inherit from that prototype.</li>
+<li>The constructor function is called with the new object bound to <code>this</code>.</li>
+<li>The result of the <code>new ...</code> expression will be what ever is returned by the constructor function. If
+nothing is returned, our newly created object (bound to <code>this</code>) will be used instead. It is usually the case
+that nothing is explicitly returned from constructor functions, but we have the option to do so.</li>
+</ol>
+<h1 id="noteworthy" class="relative group">Noteworthy <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#noteworthy" aria-label="Anchor">#</a></span></h1><p>If the constructor has no parameters, <code>new Foo</code> will be equal to <code>new Foo()</code>.</p>
+<h1 id="example" class="relative group">Example <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example" aria-label="Anchor">#</a></span></h1><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myPrototype</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">protoProperty</span> <span class="o">=</span> <span class="s2">&#34;protolicious!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">MyConstructor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">MyConstructor</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">myPrototype</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyConstructor</span>
+</span></span><span class="line"><span class="cl"><span class="nx">myInstance</span><span class="p">.</span><span class="nx">message</span> <span class="c1">// &#34;hello&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myInstance</span><span class="p">.</span><span class="nx">protoProperty</span> <span class="c1">// &#34;protolicious!&#34;
+</span></span></span></code></pre></div>
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
@@ -431,7 +422,7 @@ some point, but right now, I have other things that require my attention.</p>
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/kiss/">
+            <a class="group flex" href="/posts/rust-first-impressions/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -440,11 +431,11 @@ some point, but right now, I have other things that require my attention.</p>
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Keeping it simple</span
+                  >First impression of Rust</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2019-08-29 05:37:37 &#43;0100 &#43;0100">2019-08-29</time>
+                    <time datetime="2019-09-11 05:34:21 &#43;0100 &#43;0100">2019-09-11</time>
                   
                 </span>
               </span>
@@ -453,15 +444,15 @@ some point, but right now, I have other things that require my attention.</p>
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/javascript-new/">
+            <a class="group flex text-right" href="/posts/debugger/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Javascript's `new` keyword</span
+                  >debugger;</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2019-09-20 12:59:11 &#43;0100 &#43;0100">2019-09-20</time>
+                    <time datetime="2019-09-25 07:52:21 &#43;0100 &#43;0100">2019-09-25</time>
                   
                 </span>
               </span>

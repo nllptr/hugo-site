@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on nllptr&#39;s exceptions</title>
+    <title>JavaScript on nllptr&#39;s exceptions</title>
     <link>http://localhost:1313/tags/javascript/</link>
-    <description>Recent content in Javascript on nllptr&#39;s exceptions</description>
+    <description>Recent content in JavaScript on nllptr&#39;s exceptions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Sep 2019 07:52:21 +0100</lastBuildDate>
@@ -14,6 +14,13 @@
       <pubDate>Wed, 25 Sep 2019 07:52:21 +0100</pubDate>
       <guid>http://localhost:1313/posts/debugger/</guid>
       <description>A really simple one, this is, but oh how it blew my mind!</description>
+    </item>
+    <item>
+      <title>Javascript&#39;s `new` keyword</title>
+      <link>http://localhost:1313/posts/javascript-new/</link>
+      <pubDate>Fri, 20 Sep 2019 12:59:11 +0100</pubDate>
+      <guid>http://localhost:1313/posts/javascript-new/</guid>
+      <description>Usage #new is used to create new instances of objects with the help of constructor functions.</description>
     </item>
   </channel>
 </rss>

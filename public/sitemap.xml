@@ -46,8 +46,22 @@
   
     
       <url>
+            <loc>http://localhost:1313/posts/javascript-new/</loc>
+            <lastmod>2019-09-20T12:59:11+01:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
             <loc>http://localhost:1313/posts/rust-first-impressions/</loc>
             <lastmod>2019-09-11T05:34:21+01:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/kiss/</loc>
+            <lastmod>2019-08-29T05:37:37+01:00</lastmod>
           </url>
     
   
