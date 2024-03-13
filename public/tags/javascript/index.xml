@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/posts/javascript-new/</guid>
       <description>Usage #new is used to create new instances of objects with the help of constructor functions.</description>
     </item>
+    <item>
+      <title>Javascript Prototypes</title>
+      <link>http://localhost:1313/posts/javascript-prototypes/</link>
+      <pubDate>Thu, 19 Sep 2019 05:29:15 +0100</pubDate>
+      <guid>http://localhost:1313/posts/javascript-prototypes/</guid>
+      <description>Objects and the prototype chain #In JavaScript there is only one construct - objects.</description>
+    </item>
   </channel>
 </rss>

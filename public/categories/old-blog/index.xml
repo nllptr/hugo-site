@@ -23,11 +23,25 @@
       <description>Usage #new is used to create new instances of objects with the help of constructor functions.</description>
     </item>
     <item>
+      <title>Javascript Prototypes</title>
+      <link>http://localhost:1313/posts/javascript-prototypes/</link>
+      <pubDate>Thu, 19 Sep 2019 05:29:15 +0100</pubDate>
+      <guid>http://localhost:1313/posts/javascript-prototypes/</guid>
+      <description>Objects and the prototype chain #In JavaScript there is only one construct - objects.</description>
+    </item>
+    <item>
       <title>First impression of Rust</title>
       <link>http://localhost:1313/posts/rust-first-impressions/</link>
       <pubDate>Wed, 11 Sep 2019 05:34:21 +0100</pubDate>
       <guid>http://localhost:1313/posts/rust-first-impressions/</guid>
       <description>I just started looking at Rust.</description>
+    </item>
+    <item>
+      <title>Javascript Promises</title>
+      <link>http://localhost:1313/posts/javascript-promises/</link>
+      <pubDate>Fri, 30 Aug 2019 14:00:34 +0100</pubDate>
+      <guid>http://localhost:1313/posts/javascript-promises/</guid>
+      <description>In short #Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart.</description>
     </item>
     <item>
       <title>Keeping it simple</title>

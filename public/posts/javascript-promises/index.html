@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>debugger; &middot; nllptr&#39;s exceptions</title>
-    <meta name="title" content="debugger; &middot; nllptr&#39;s exceptions" />
+  <title>Javascript Promises &middot; nllptr&#39;s exceptions</title>
+    <meta name="title" content="Javascript Promises &middot; nllptr&#39;s exceptions" />
   
   
   
@@ -54,14 +54,14 @@
     name="description"
     content="
       
-        A really simple one, this is, but oh how it blew my mind!
+        In short #Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart.
       
     "
   />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/debugger/" />
+  <link rel="canonical" href="http://localhost:1313/posts/javascript-promises/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -76,16 +76,16 @@
   
   
   
-  <meta property="og:title" content="debugger;" />
-<meta property="og:description" content="A really simple one, this is, but oh how it blew my mind!" />
+  <meta property="og:title" content="Javascript Promises" />
+<meta property="og:description" content="In short #Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/debugger/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-09-25T07:52:21+01:00" />
-<meta property="article:modified_time" content="2019-09-25T07:52:21+01:00" />
+<meta property="og:url" content="http://localhost:1313/posts/javascript-promises/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-30T14:00:34+01:00" />
+<meta property="article:modified_time" content="2019-08-30T14:00:34+01:00" />
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="debugger;"/>
-<meta name="twitter:description" content="A really simple one, this is, but oh how it blew my mind!"/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Javascript Promises"/>
+<meta name="twitter:description" content="In short #Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart."/>
 
   
   <script type="application/ld+json">
@@ -93,26 +93,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "debugger;",
-    "headline": "debugger;",
+    "name": "Javascript Promises",
+    "headline": "Javascript Promises",
     
-    "abstract": "A really simple one, this is, but oh how it blew my mind!",
+    "abstract": "In short #Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart.",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/debugger\/",
+    "url" : "http:\/\/localhost:1313\/posts\/javascript-promises\/",
     "author" : {
       "@type": "Person",
       "name": "Simon Wessel"
     },
     "copyrightYear": "2019",
-    "dateCreated": "2019-09-25T07:52:21\u002b01:00",
-    "datePublished": "2019-09-25T07:52:21\u002b01:00",
+    "dateCreated": "2019-08-30T14:00:34\u002b01:00",
+    "datePublished": "2019-08-30T14:00:34\u002b01:00",
     
-    "dateModified": "2019-09-25T07:52:21\u002b01:00",
+    "dateModified": "2019-08-30T14:00:34\u002b01:00",
     
-    "keywords": ["JavaScript"],
+    "keywords": ["JavaSctip"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "160"
+    "wordCount": "163"
   }
   </script>
 
@@ -242,7 +242,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        debugger;
+        Javascript Promises
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -278,7 +278,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2019-09-25 07:52:21 &#43;0100 &#43;0100">2019-09-25</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2019-08-30 14:00:34 &#43;0100 &#43;0100">2019-08-30</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -296,15 +296,24 @@
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <p>A really simple one, this is, but oh how it blew my mind! In your JavaScript code, insert <code>debugger;</code>
-where you might want a breakpoint. Refresh your browser with dev tools open, and voila! The debugger pauses
-execution at the debugger statement.</p>
-<p>Using the debugger statement is less typing than console logging, and you get all the variables that are in scope.
-You also get the ability to step and can see how stuff changes. When console logging it might be hard to know
-when stuff happens, and that might lead to a wrong idea of what&rsquo;s actually happening.</p>
-<p>I&rsquo;m a keyboard person. If I can avoid mousing around, I&rsquo;ll avoid it. Using the debugger statement, I can edit
-my code, alt+tab to the browser, refresh and see what&rsquo;s up, and alt+tab back to the editor. I don&rsquo;t need the
-mouse unless I want to start stepping through the code, and that probably means taking a break from editing anyways.</p>
+        <h1 id="in-short" class="relative group">In short <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#in-short" aria-label="Anchor">#</a></span></h1><p>Promises makes chaining asynchronous tasks a little prettier than its deeply nested callback counterpart. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">myPromise</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">doTheFirstThing</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">doTheSecondThing</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">failHandler</span><span class="p">)</span>
+</span></span></code></pre></div><p>This chainability is argued to be more easily reasoned about. Promises also come with some guarantees:</p>
+<ol>
+<li>Callbacks won&rsquo;t be called before completion of the current run of the event loop, which avoids race conditions.</li>
+<li>Callbacks added with <code>then()</code> even <em>after</em> the success/failure of async operation will be called.</li>
+<li>Multiple callbacks can be added with <code>then()</code>. They will be executed in order.</li>
+<li>Callbacks are called one time at most.</li>
+</ol>
+<h2 id="elaboration" class="relative group">Elaboration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#elaboration" aria-label="Anchor">#</a></span></h2><p><code>catch(failureCallback)</code> is short for <code>then(null, failureCallback)</code>.</p>
+<p>Regarding guarantee #1, some clarification might be needed. The JavaScript event loop does not preemt &ldquo;the
+current run&rdquo; (i.e. the currently running function). This makes reasoning about our code easier, but it also means
+that for example mouse events can be delayed by a long-running function.
+When using callbacks, it&rsquo;s harder to know what is actually running, because we have functions calling functions.</p>
+<p>Learned from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises" target="_blank" rel="noreferrer">MDN</a></p>
 
       </div>
     </section>
@@ -404,7 +413,7 @@ mouse unless I want to start stepping through the code, and that probably means 
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/javascript-new/">
+            <a class="group flex" href="/posts/kiss/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -413,11 +422,11 @@ mouse unless I want to start stepping through the code, and that probably means 
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Javascript's `new` keyword</span
+                  >Keeping it simple</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2019-09-20 12:59:11 &#43;0100 &#43;0100">2019-09-20</time>
+                    <time datetime="2019-08-29 05:37:37 &#43;0100 &#43;0100">2019-08-29</time>
                   
                 </span>
               </span>
@@ -426,15 +435,15 @@ mouse unless I want to start stepping through the code, and that probably means 
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/gnu-stow/">
+            <a class="group flex text-right" href="/posts/rust-first-impressions/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Gnu Stow</span
+                  >First impression of Rust</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-03-11 21:48:38 &#43;0100 CET">2024-03-11</time>
+                    <time datetime="2019-09-11 05:34:21 &#43;0100 &#43;0100">2019-09-11</time>
                   
                 </span>
               </span>
