@@ -33,4 +33,22 @@
   
     
   
+    
+      <url>
+            <loc>http://localhost:1313/posts/debugger/</loc>
+            <lastmod>2019-09-25T07:52:21+01:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/rust-first-impressions/</loc>
+            <lastmod>2019-09-11T05:34:21+01:00</lastmod>
+          </url>
+    
+  
 </urlset>
