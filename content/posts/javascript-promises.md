@@ -1,7 +1,7 @@
 +++
 title = "Javascript Promises"
 date = 2019-08-30T14:00:34+01:00
-tags = ["JavaSctip"]
+tags = ["JavaScript"]
 categories = ["Old blog"]
 +++
 
